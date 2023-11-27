@@ -25,14 +25,20 @@ def encode(string):
     pos = 1
     for c in string:
 
+        # Capitalize
+        c = c.upper()
+
         # If the character is a space, reset the position
         if c == ' ':
             encoded_str += ' '
             pos = 1
             continue
 
+        # Ignore non alpha-numeric chars
+        if c not in ALPHABET:
+            continue
+
         # If the character is a letter, encode it
-        c = c.upper()
         encoded_str += encode_char(c, pos)
         pos += 1
         
