@@ -1,2 +1,2 @@
 # CodeVL
-Welcome to CodeVL! Use this code to communicate safely with your friends.
+Welcome to CodeVL! Use this web app to communicate safely with your friends.
