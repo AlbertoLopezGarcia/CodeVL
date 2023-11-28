@@ -34,6 +34,17 @@ def encode(string):
             pos = 1
             continue
 
+        if c == ',':
+            encoded_str += 'e'
+            pos = 1
+            continue
+
+        if c == '.':
+            encoded_str += 'Π'
+            pos = 1
+            continue
+
+
         # Ignore non alpha-numeric chars
         if c not in ALPHABET:
             continue

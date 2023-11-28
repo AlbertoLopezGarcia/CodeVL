@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vernon-Lopez Code</title>
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+    <style>
+        .input-container {
+            position: relative;
+            margin: 20px;
+        }
+
+        .background-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            pointer-events: none; /* TODO: Try without this */
+            color: #aaa;
+        }
+
+        .user-input {
+            padding: 10px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Text to be converted to VLCode</h1>
+    <form method="post" action="{% url 'enter_text' function='encode' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <h1>Enter Text to be decoded</h1>
+    <form method="post" action="{% url 'enter_text' function='decode' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <div>
+        <h2>Previous translations</h2>
+    </div>
+</body>

@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .forms import MyForm
 from .coder import encode, decode
 
-def enter_text(request, function=None):
+def home(request, function=None):
     if request.method == 'POST':
         form = MyForm(request.POST)
         if form.is_valid():
@@ -18,4 +18,4 @@ def enter_text(request, function=None):
     else:
         form = MyForm()
 
-    return render(request, 'enter_text.html', {'form': form})
+    return render(request, 'home.html', {'form': form})

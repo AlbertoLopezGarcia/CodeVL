@@ -1,0 +1,17 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Text</title>
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+</head>
+<body>
+    <h1>Your translated message is:</h1>
+    <p>{{ string }}</p>
+    <div>
+
+        <a href="{% url 'home' %}">Back to previous page</a>
+    </div>
+</body>
+</html>
