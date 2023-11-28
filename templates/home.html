@@ -36,6 +36,9 @@
     <h1>Enter Text to be decoded</h1>
     <form method="post" action="{% url 'enter_text' function='decode' %}">
         {% csrf_token %}
+        <script>
+            form.fields['user_text'].initial = 'Your Default Text'
+        </script>
         {{ form.as_p }}
         <button type="submit">Submit</button>
     </form>
