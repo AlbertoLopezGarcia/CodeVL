@@ -1,7 +1,7 @@
 # CodeVL
 Welcome to CodeVL! Use this web app to communicate safely with your friends.
 
-This code was developed by Oscar Vernon Rodriguez and Alberto Lopez Garcia in 2016.
+The encription mechanism was developed by Oscar Vernon and Alberto Lopez, then middle school students, in 2016.
 
 Please use this link to access the deployed webapp:
 
